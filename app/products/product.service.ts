@@ -22,7 +22,7 @@ getProducts() : Observable<IProduct[]> {
 
 getProduct(id: number): Observable<IProduct>{
     return this.getProducts()
-    .map((products: IProduct[])=> products.find(p=>p.productId ===id);
+    .map((products: IProduct[])=> products.find(p=>p.productId ===id));
 }
 
 private handleError(error: Response)
